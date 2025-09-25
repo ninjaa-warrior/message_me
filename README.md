@@ -1,24 +1,27 @@
-# README
+## Imlement Semantic ui
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Install packages\
 
-Things you may want to cover:
+  - yarn add semantic-ui-css jquery
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+* Copy CSS/JS into app/assets (Propshaft requirement)
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+  - mkdir -p app/assets/builds
+  - cp node_modules/semantic-ui-css/semantic.min.css app/assets/builds/
+  - cp node_modules/semantic-ui-css/semantic.min.js app/assets/builds/
+  - cp node_modules/jquery/dist/jquery.min.js app/assets/builds/
 
-* Services (job queues, cache servers, search engines, etc.)
+* Import in application layout
 
-* Deployment instructions
 
-* ...
+
+  <%= stylesheet_link_tag "semantic.min", "data-turbo-track": "reload" %>
+ 
+
+
+  <%= javascript_include_tag "jquery.min" %>
+  <%= javascript_include_tag "semantic.min" %>
